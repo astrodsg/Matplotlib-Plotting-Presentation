@@ -131,9 +131,9 @@ plt.show()
 x,y = star_data['Sun'].T
 ax = plt.figure().add_subplot(111)
 kws = dict(\
-    color = 'b',
+    color = 'r',
     lw=3,
-    alpha=0.3,
+    alpha=0.9,
     )
 ax.plot(x,y,**kws)
 plt.show()
@@ -151,8 +151,8 @@ class PlotItemStar (object):
         x,y = star_data[name].T 
         kws.setdefault("label",name)
         kws.setdefault("color","r")
-        kws.setdefault("linestyle","ls")
-        self.line, = ax.plot(x,y,label=name)
+        kws.setdefault("linestyle","-")
+        self.line, = ax.plot(x,y,**kws)
         self.ax = ax 
         self.name = name 
         self.star_data = star_data 
@@ -201,6 +201,10 @@ ax.plot(x,y,ls="none",marker="o")
 plt.show() 
 
 # ########################################################################### #
+
+
+# The real way I learned Matplotlib was looking at their gallery. I found a 
+# plot exemplifying what I want the looked at the source code to recreate. 
 
 # Check out http://matplotlib.org/gallery.html
 
