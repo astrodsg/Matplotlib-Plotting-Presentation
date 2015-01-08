@@ -202,7 +202,7 @@ plt.show()
 
 # ########################################################################### #
 
-# Check out matplotlib.com/gallery
+# Check out http://matplotlib.org/gallery.html
 
 
 
